@@ -9,9 +9,14 @@ public class 문자찾기 {
     System.out.println(str);
     
     //문자열을 모두 돌면서 c가 나오면 count 올려주기
-    for (int i=0; i<str.length(); i++) {
-      if (str.charAt(i) == c) {
-      	count++;
+    // for (int i=0; i<str.length(); i++) {
+    //   if (str.charAt(i) == c) {
+    //   	count++;
+    //   }
+    // }
+    for (char x : str.toCharArray()) {
+      if (x == c) {
+        count++;
       }
     }
     
