@@ -32,6 +32,19 @@ public class 유효한팰린드롬 {
         return answer;
     }
 
+    //강의 코드
+    // public String Solution(String str) {
+    //     String answer = "NO";
+    //     //A부터 Z까지가 아니면 빈문자로
+    //     str = str.toUpperCase().replaceAll("[^A-Z]", "");
+    //     String tmp = new StringBuilder(str).reverse().toString();
+    //     if (str.equals(tmp)) {
+    //         answer = "YES";
+    //     }
+
+    //     return answer;
+    // }
+
     public static void main(String[] args) {
         유효한팰린드롬 T = new 유효한팰린드롬();
         Scanner sc = new Scanner(System.in);
