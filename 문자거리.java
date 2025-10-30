@@ -28,12 +28,38 @@ public class 문자거리 {
                 min = 0;
             } else {
                 min++;
+                //앞에서부터 잰 거리랑 비교해서 가까운 거 넣기
                 answer[i] = Math.min(answer[i], min);
             }
         }
         
         return answer;
     }
+
+    // 강의코드
+    // public int[] Solution(String s, char t) {
+    //     int[] answer = new int[s.length()];
+    //     int p = 1000;
+
+    //     for (int i=0; i<s.length(); i++) {
+    //         if (s.charAt(i) == t) {
+    //             p = 0;
+    //             answer[i] = p;
+    //         } else {
+    //             p++;
+    //             answer[i] = p;
+    //         }
+    //     }
+
+    //     for (int i=s.length()-1; i>0; i--) {
+    //         if (s.charAt(i) == t) {
+    //             p = 0;
+    //         } else {
+    //             answer[i] = Math.min(answer[i], p);
+    //         }
+    //     }
+    //     return answer;
+    // }
 
     public static void main(String[] args) {
         문자거리 T = new 문자거리();
