@@ -9,7 +9,7 @@ public class 올바른괄호 {
         for (char x : str.toCharArray()) {
             if (x == '(') {
                 stack.add(x);
-            } else if (stack.isEmpty() && x == ')') {
+            } else if (stack.isEmpty()) {
                 return "NO";
             } else {
                 stack.pop();
