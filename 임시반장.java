@@ -5,10 +5,10 @@ public class 임시반장 {
         int answer = 0;
         int max = 0;
 
-        for (int i=1; i<=n; i++) {
+        for (int i=0; i<n; i++) {
             int count = 0;
-            for (int j=1; j<=n; j++) {
-                for (int k=1; k<=5; k++) {
+            for (int j=0; j<n; j++) {
+                for (int k=0; k<5; k++) {
                     if (arr[i][k] == arr[j][k]) {
                         count++;
                         break;
@@ -17,7 +17,7 @@ public class 임시반장 {
             }
             if (max < count) {
                 max = count;
-                answer = i;
+                answer = i+1;
             }
         }
         return answer;
@@ -29,8 +29,8 @@ public class 임시반장 {
         int n = sc.nextInt();
         int[][] arr = new int[n+1][6];
 
-        for (int i=1; i<=n; i++) {
-            for (int j=1; j<=5; j++) {
+        for (int i=0; i<n; i++) {
+            for (int j=0; j<5; j++) {
                 arr[i][j] = sc.nextInt();
             }
         }
