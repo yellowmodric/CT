@@ -6,7 +6,8 @@ public class 연속된자연수합 {
         int lt = 1;
         int sum = 0;
 
-        for (int i=1; i<n; i++) {
+        //시간복잡도 줄이는 방법
+        for (int i=1; i<=n/2+1; i++) {
             sum += i;
 
             if (sum == n) {
