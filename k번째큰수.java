@@ -22,10 +22,15 @@ public class k번째큰수 {
             cnt++;
 
             if (cnt == k) {
-                answer = x;
+                return x;
             }
         }
         return answer;
+
+        //set.remove() 원소 삭제
+        //set.size() 원소 개수
+        //set.first() 오름차순이면 최솟값, 내림차순이면 최댓값
+        //set.last() 오름차순이면 최댓값, 내림차순이면 최솟값
     }
     
     public static void main(String[] args) {
