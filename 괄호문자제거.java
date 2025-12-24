@@ -11,6 +11,8 @@ public class 괄호문자제거 {
                 stack.push(str.charAt(i));
             } else {
                 // (가 나올때까지 pop해야 함
+                //stack.pop() 하면 꺼낸 값을 리턴해줌
+                //while (stack.pop() == '(') 이렇게 해줘도 됨
                 while (stack.peek() != '(') {
                     stack.pop();
                 }
