@@ -1,16 +1,17 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class 장난꾸러기 {
-    public int[] Solution(int n, int[] arr) {
-        int[] answer = new int[2];
+    public ArrayList<Integer> Solution(int n, int[] arr) {
+        ArrayList<Integer> answer = new ArrayList<>();
 
-        for (int i=0; i<n-1; i++) {
-            if (arr[i] > arr[i+1]) {
-                if (answer[0] == 0) {
-                    answer[0] = i+1;
-                } else {
-                    answer[1] = i+2;
-                }
+        int[] original = arr.clone();
+        Arrays.sort(original);
+
+        for (int i=0; i<n; i++) {
+            if (arr[i] != original[i]) {
+                answer.add(i+1);
             }
         }
         return answer;
