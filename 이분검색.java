@@ -6,9 +6,19 @@ public class 이분검색 {
         int answer = 0;
         Arrays.sort(arr);
 
-        for (int i=0; i<n; i++) {
-            if (arr[i] == m) {
-                return i+1;
+        int lt = 0;
+        int rt = n-1;
+
+        while (lt <= rt) {
+            int mid = (lt + rt) / 2;
+
+            if (arr[mid] == m) {
+                return mid+1;
+            } 
+            if (arr[mid] > m) {
+                rt = mid-1;
+            } else {
+                lt = mid+1;
             }
         }
         return answer;
