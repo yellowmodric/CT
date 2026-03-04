@@ -5,33 +5,34 @@ import java.util.Scanner;
 public class 송아지찾기 {
     public int Solution(int s, int e) {
         int answer = 0;
-        int[] dis = {-1, 1, 5};
+        int[] distance = {-1, 1, 5};
         Queue<Integer> queue = new LinkedList<>();
         boolean[] visited = new boolean[10001];
         queue.offer(s);
         visited[s] = true;
 
         while (!queue.isEmpty()) {
-            int len = queue.size();
+            int n = queue.size();
 
-            for (int i=0; i<len; i++) {
+            for (int i=0; i<n; i++) {
                 int x = queue.poll();
 
-                if (x == e) return answer;
-
                 for (int j=0; j<3; j++) {
-                    int nx = x + dis[j];
+                    int nx = x + distance[j];
+
+                    if (nx == e) return answer+1;
+
                     if (nx >= 1 && nx <= 10000 && !visited[nx]) {
-                        visited[nx] = true;
                         queue.offer(nx);
+                        visited[nx] = true;
                     }
                 }
             }
-
             answer++;
         }
         return answer;
     }
+
     public static void main(String[] args) {
         송아지찾기 T = new 송아지찾기();
         Scanner sc = new Scanner(System.in);
